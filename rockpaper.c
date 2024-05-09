@@ -42,7 +42,7 @@ int main() {
 
         if (result == -1) {
             printf("\n\n\t\t\t\tGame Draw!\n");
-            score = 0;
+            score = score;
         } else if (result == 1) {
             printf("\n\n\t\t\t\tWow! You have won the game!\n");
             score +=5;
@@ -58,6 +58,7 @@ int main() {
         scanf(" %c", &play_again);
     }
 
+    printf ("Final score is: %d ", score);
     printf("Thanks for playing!\n");
     return 0;
 }

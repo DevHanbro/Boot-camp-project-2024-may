@@ -17,7 +17,6 @@ int main() {
     char u;
     char result;
     int n;
-    int  score=0;
     char play_again = 'y';
 
     srand(time(NULL));
@@ -26,7 +25,7 @@ int main() {
         n = rand() % 100;
         printf("This is a standard rock, paper scissors game.\n");
         printf("Press R for Rock, P for paper and S for scissors\n");
-        printf("Enter your choice: ");
+        printf("Enter your choice:\n");
         scanf(" %c", &u); // added space before %c to ignore leading whitespace
         printf("The entered data is: %c\n", u);
 
@@ -42,17 +41,13 @@ int main() {
 
         if (result == -1) {
             printf("\n\n\t\t\t\tGame Draw!\n");
-            score = 0;
         } else if (result == 1) {
             printf("\n\n\t\t\t\tWow! You have won the game!\n");
-            score +=5;
         } else {
             printf("\n\n\t\t\t\tOh! You have lost the game!\n");
-            score -=3;
         }
 
         printf("\t\t\t\tYou choose : %c and Computer choose : %c\n", u, computer);
-        printf("The score is %d\n",score);
 
         printf("Do you want to play again? (y/n): ");
         scanf(" %c", &play_again);
